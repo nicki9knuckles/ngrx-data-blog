@@ -2,6 +2,7 @@
   "name": "ngrx-data-blog",
   "version": "0.0.0",
   "scripts": {
+    "server": "nodemon ./server/server.js",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
@@ -19,6 +20,15 @@
     "@angular/platform-browser": "~8.0.0",
     "@angular/platform-browser-dynamic": "~8.0.0",
     "@angular/router": "~8.0.0",
+    "@ngrx/data": "^9.1.2",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "errorhandler": "^1.5.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mongoose": "^5.9.12",
+    "morgan": "^1.10.0",
+    "path": "^0.12.7",
     "rxjs": "~6.4.0",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"
