@@ -1,0 +1,16 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  padding-top: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  flex-wrap: nowrap;
+  .container {
+    height: 100%;
+    width: 100%;
+    flex: 1;
+    .router-container {
+      padding: 16px;
+    }
+  }
+}

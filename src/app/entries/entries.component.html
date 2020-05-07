@@ -1,0 +1,29 @@
+<div class="container" *ngIf="entries$ | async as entries; else loading">
+  <h1>Tell me something</h1>
+  <form (ngSubmit)="add()" [formGroup]="entry">
+    <div class="form-group">
+      <label for="name">Title</label>
+      <input type="text" class="form-control" id="title" required formControlName="title" name="title">
+      <br><br>
+      <label for="name">Body</label>
+      <input type="text" class="form-control" id="body" required formControlName="body" name="body">
+      <br><br>
+      <label for="name">Author</label>
+      <input type="text" class="form-control" id="author" required formControlName="author" name="author">
+    </div>
+    <br><br>
+    <button type="submit" [disabled]="!entry.valid">Submit</button>
+  </form>
+
+  <div>
+    <h2>Current Entries</h2>
+    <ul>
+      <li *ngFor="let entry of entries">{{entry.title}}</li>
+    </ul>
+  </div>
+
+</div>
+
+<ng-template #loading>
+  <mat-spinner class="loading"></mat-spinner>
+</ng-template>
